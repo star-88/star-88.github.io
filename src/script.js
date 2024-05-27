@@ -8,6 +8,11 @@ $(document).ready(function() {
       navContainer.toggleClass("nav-show-menu")
     })
 
+  window.addEventListener('scroll', () => {
+    let header = document.querySelector('nav');
+    header.classList.toggle('sticky', window.scrollY>750)
+  })
+
   //   $(".fas").click(function () {
   //     $(".fas").toggleClass("fa-bars fa-times");
   // });
