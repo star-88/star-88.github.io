@@ -1,13 +1,16 @@
 //NavBar Toggle Class
 $(document).ready(function() {
-    var navList = $('.nav-list')
-    var navMenu = $('.nav-menu')
-    var navContainer = $('.nav-container')
+    var navMenu = $('.nav-menu-open')
+  var navContainer = $('.nav-container')
 
     navMenu.click(function() {
         console.log('navMemu Click')
-        navContainer.toggleClass("nav-show-menu")
+      navContainer.toggleClass("nav-show-menu")
     })
+
+  //   $(".fas").click(function () {
+  //     $(".fas").toggleClass("fa-bars fa-times");
+  // });
 
     // Select all links with hashes
 $('a[href*="#"]')
@@ -17,8 +20,8 @@ $('a[href*="#"]')
 .click(function(event) {
   // On-page links
   if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+    &&
     location.hostname == this.hostname
   ) {
     // Figure out element to scroll to
@@ -45,4 +48,4 @@ $('a[href*="#"]')
     }
   }
 });
-}) 
+})

@@ -187,7 +187,7 @@ h2::before{
 .btn-full:hover{
     background: #1a4d6f;
     transition:all 0.5s
-    
+
 }
 
 .img-full{
@@ -223,7 +223,7 @@ nav{
     margin-right: 0px;
 }
 
-.nav-menu{
+.nav-menu-open{
     display: none;
 }
 
@@ -232,11 +232,13 @@ nav{
         display: none;
     }
 
-    .nav-menu {
+    .nav-menu-open {
     display: block;
     float: right;
     margin-top: 20px;
+    transition: transform 0.5s;
     }
+
 
     .nav-show-menu {
         position: relative;
@@ -244,23 +246,30 @@ nav{
 
     .nav-show-menu .nav-list {
         display: block;
-        position: absolute;
-        top: 80px;
-        z-index: 5;
+        position: fixed;
+        left: 0;
+        top: 100px;
+       
+        z-index: 10;
         background-color: #ffffff;
         box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
         width: 100%;
-
+        padding: 0;
     }
 
     .nav-show-menu .nav-list li{
         display: block;
         text-align: center;
-        height: 40px;
-        margin-top: 20px;
-        margin-right: 0;
+        padding: 16px;
+        margin-top: 0px;
+        margin-right: 0px;
     }
 }
+
+.nav-list li:hover {
+    background-color: bisque;
+    transition: all 400ms ease-in 50ms;
+  }
 
 /**********
 Header
@@ -269,11 +278,11 @@ Header
 header{
     background:url("../img/jumbotron.jpg");
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     height: 750px;
     position: relative;
-} 
+}
 
 .header-container{
     background: rgba(0,0,0,0.5);
@@ -283,7 +292,7 @@ header{
     position: absolute;
     top:75%;
     left:25%;
-    transform: translate(-50%,-50%); 
+    transform: translate(-50%,-50%);
 }
 
 @media only screen and (max-width:768px) {
@@ -380,7 +389,7 @@ testimonial
 }
 
 .testimonial-card-text::before {
-    content:"\201C";   
+    content:"\201C";
     top: -50px;
     left:-20px;
 }
@@ -435,12 +444,12 @@ Clients
 }
 
 /**********
-Contect Us
+Contact Us
 **********/
 
 .google-maps {
     position: relative;
-    padding-bottom: 75%; 
+    padding-bottom: 75%;
     height: 0;
     overflow: hidden;
 }
@@ -466,7 +475,7 @@ Contect Us
     height: 40px;
     border-radius: 5px;
     padding: 6px 12px;
-    border:1px solid #dedede 
+    border:1px solid #dedede
 }
 
 textarea.form-input {
