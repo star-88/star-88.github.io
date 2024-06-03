@@ -10,6 +10,13 @@ grey:#dedede;
 green-light-0:#55efc4;
 green:#29787c;
 **********/
+:root{
+    --primary-color: #FA9B6B;
+    --secondary-color1: #C8C4BB;
+    --secondary-color2: #1B392F;
+    --secondary-color3: #EBEBE9;
+    --text-color: #0D0906;
+}
 *{
     margin:0;
     padding:0;
@@ -18,8 +25,10 @@ green:#29787c;
 }
 
 body{
-    font-family: 'lato',Helvetica, sans-serif;
-    color:#535353;
+    font-family: "Noto Serif TC", sans-serif;
+    color: var(--text-color);
+    background-image: url(../img/bg.jpg);
+    background-repeat:repeat;
 }
 
 /**********
@@ -37,6 +46,10 @@ Utilities
     padding-top: 20px;
 }
 
+.pt-30{
+    padding-top: 20px;
+}
+
 .pb-90{
     padding-bottom: 90px;
 }
@@ -47,6 +60,10 @@ Utilities
 
 .pb-20{
     padding-bottom: 20px;
+}
+
+.mt-30{
+    margin-top: 30px;
 }
 
 .mb-60{
@@ -61,9 +78,15 @@ Utilities
     margin-bottom: 20px;
 }
 
+.ml-30{
+    margin-left: 30px;
+}
+
 .text-center{
     text-align: center;
 }
+
+
 
 /**********
 Layout / Grid Design
@@ -91,6 +114,7 @@ Layout / Grid Design
     display: table;
     clear: both;
 }
+
 
 [class^="col-"] {
     padding-right: 15px;
@@ -135,7 +159,7 @@ Global HTML ELEMENT
 
 a{
     text-decoration: none;
-    color:#535353;
+    color:#243837;
 }
 
 .h2-container{
@@ -144,10 +168,11 @@ a{
 }
 
 h2{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     position: relative;
     display: inline-block;
+    color: var(--secondary-color2);
 }
 
 h2::before{
@@ -155,9 +180,13 @@ h2::before{
     display: block;
     width: 30px;
     height: 5px;
-    background: #2980b9;
+    background: var(--primary-color);
     position: absolute;
     bottom: -10px;
+}
+
+h3{
+    font-weight: 400;
 }
 
 .btn{
@@ -168,26 +197,30 @@ h2::before{
 }
 
 .btn-inline{
-    color: #2980b9;
-    border: #2980b9 1px solid ;
+    color: var(--secondary-color2);
+    border: var(--secondary-color2) 1px solid ;
+    border-radius: 8px;
 }
 
 .btn-inline:hover{
-    color: #7bbff0;
-    border: #7bbff0 1px solid ;
-    box-shadow: 0px 0px 3px 0px rgb(0, 0, 0, 0.5);
-    transition:all 0.5s
+    color: var(--secondary-color2);
+    border: var(--secondary-color2);
+    box-shadow: 0px 0px 5px 0px var(--secondary-color2);
+    transition:all 0.5s;
 }
 
 .btn-full{
-    color: #ffffff;
-    background: #2980b9;
+    color: var(--secondary-color3);
+    background-color: var(--secondary-color2);
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .btn-full:hover{
-    background: #1a4d6f;
-    transition:all 0.5s
-
+    color: var(--secondary-color2);
+    background-color: var(--secondary-color3);
+    transition:all 0.5s;
+    border-radius: 8px;
 }
 
 .img-full{
@@ -199,15 +232,17 @@ Nav
 **********/
 
 nav{
-    padding: 16px;
+    padding: 8px;
     z-index: 1000;
     width: 100%;
     position: fixed;
     background-color: hwb(0 100% 0% / 0.8);
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
 }
 
 nav.sticky{
-    background-color: #f1f1f1;
+    background-color: #EBEBE9;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
 }
 
 .nav-logo{
@@ -223,16 +258,33 @@ nav.sticky{
 
 .nav-list li{
     display: inline-block;
-    margin-top: 20px;
-    margin-right: 16px;
+    margin: 8px 0;
 }
 
+
+.nav-list a{
+    display: block;
+    padding: 12px 16px;
+    color: var(--secondary-color2);
+}
 .nav-list li:last-of-type{
     margin-right: 0px;
 }
 
 .nav-menu-open{
     display: none;
+    cursor: pointer;
+    transition: all 400ms ease-in 50ms;
+}
+
+.nav-list li :hover {
+    background-color: rgba(250, 155, 107, 0.3);
+    transition: all 400ms ease-in 50ms;
+  }
+
+.nav-list li:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
 }
 
 @media only screen and (max-width:768px) {
@@ -244,7 +296,6 @@ nav.sticky{
     display: block;
     float: right;
     margin-top: 20px;
-    transition: transform 0.5s;
     }
 
 
@@ -256,39 +307,36 @@ nav.sticky{
         display: block;
         position: fixed;
         left: 0;
-        top: 100px;
-
+        top: 74px;
         z-index: 10;
-        background-color: #ffffff;
-        box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
+        background-color: var(--secondary-color3);
         width: 100%;
         padding: 0;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     }
 
     .nav-show-menu .nav-list li{
         display: block;
         text-align: center;
-        padding: 16px;
         margin-top: 0px;
         margin-right: 0px;
     }
-}
 
-.nav-list li:hover {
-    background-color: bisque;
-    transition: all 400ms ease-in 50ms;
-  }
+    .nav-show-menu .nav-list li:last-of-type{
+        margin-bottom: 0px;
+    }
+}
 
 /**********
 Header
 **********/
 
 header{
-    background:url("../img/jumbotron.jpg");
+    background:url("../img/header-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 750px;
+    height: 832px;
     position: relative;
 }
 
@@ -298,7 +346,7 @@ header{
     padding: 20px;
     display: inline-block;
     position: absolute;
-    top:75%;
+    top:50%;
     left:25%;
     transform: translate(-50%,-50%);
 }
@@ -311,130 +359,208 @@ header{
 }
 
 .header-h1{
-    font-weight: 300;
+    font-weight: 500;
     font-size: 42px;
     margin: 0 0 10px 0;
 }
 
 .subtitle{
     color: #dedede;
-    font-style: italic;
+
     margin-top: 10px;
     text-transform: capitalize;
 }
 
 /**********
-About
+About Us
 **********/
 
 .about-text{
     line-height: 1.8;
-    width: 80%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
 
-/**********
-Hotel Showcase
-**********/
+@media only screen and (max-width:768px) {
+    #About .h2-container {
+        margin-top: 20px;
+    }
+}
 
-.hotel-showcase {
+
+/**********
+Service
+**********/
+#Service{
+    background-color: #EAE0CF;
+}
+
+.service-showcase{
     list-style: none;
     width: 100%;
 }
 
-.hotel-showcase li {
+.service-showcase li {
     width: 25%;
     float: left;
-    height: 180px;
-    overflow: hidden;
+    height: 280px;
+    overflow:hidden;
+}
+
+.service-photo {
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-in 50ms;
+}
+
+.img-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    opacity: 0;
+    transition: all 400ms ease-in 50ms;
+}
+
+.mask h3 {
+    text-align: center;
+    padding-top: 120px;
+    font-weight: 200;
+}
+
+
+.img-container:hover .mask {
+    opacity: 1;
 }
 
 @media only screen and (max-width:768px) {
-    .hotel-showcase li{
+    .service-showcase li{
         width: 50%;
     }
-}
 
-.hotel-photo {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s;
-}
+    #Service .service2{
+        margin-top: 20px;
+    }
 
-.hotel-photo:hover {
-    transform: scale(1.1);
 }
-
 /**********
 testimonial
 **********/
 
 .testimonial-card{
-    padding: 60px 30px 0px;
+    padding: 0px 30px 0px ;
     border-radius: 20px;
-    border:1px solid #ccc;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 @media only screen and (max-width:768px) {
     .testimonial-card {
-        margin-bottom: 20px;
+        margin: 0px 20px 20px;
+        flex-direction: column;
     }
-}
+    .testimonial-card-info .testimonial-card-name{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 
-.testimonial-card-text {
-    line-height: 1.8;
-    padding-bottom: 60px;
-    position: relative;
-}
-
-.testimonial-card-text::before,
-.testimonial-card-text::after{
-    font-size: 64px;
-    color: #dedede;
-    position:absolute;
-}
-
-.testimonial-card-text::before {
-    content:"\201C";
-    top: -50px;
-    left:-20px;
-}
-
-.testimonial-card-text::after {
-    content:"\201D";
-    bottom:-30px;
-    right: 0px;
 }
 
 .testimonial-card-info {
-    background: #29787c;
-    color: #ffffff;
-    margin: 0 -30px;
-    padding: 60px 0px 30px;
+    background: var(--secondary-color1);
+    color: var(--secondary-color3);;
+    margin: 0px -30px 0px;
+    padding: 60px 30px;
     position: relative;
 }
 
-.testimonial-card-name{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.testimonial-card-position{
-    color:#55efc4;
-}
-
 .testimonial-card-img{
-    position:absolute;
+    position: absolute;
     left: 50%;
-    top:-25%;
     transform: translateX(-50%);
     height: 60px;
     width: 60px;
-    background: #fff;
+    background: var(--secondary-color3);
     border-radius: 50%;
-    border: 3px solid #7bbff0;
+    border: 2px solid var(--secondary-color2);
+}
+
+.testimonial-card-name{
+    top: 90%;
+    font-size: 18px;
+    margin-top: 60px;
+    color: var(--secondary-color2);
+    font-weight: 500;
+    width: 20vh;
+}
+
+
+.score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 30px 50px;
+
+}
+
+.star-score{
+    padding: 0px 30px;
+    position: relative;
+    display: flex;
+    color: var(--primary-color);
+}
+
+.testimonial-card-text{
+    line-height: 1.8;
+    padding: 8px 30px;
+    position: relative;
+}
+
+.comeDate{
+    padding: 0px 30px;
+    position: relative;
+    line-height: 1.8;
+    color: gray;
+}
+
+.score::before,
+.score::after{
+    font-size: 64px;
+    color: #c7c7c7;
+    position:absolute;
+}
+
+.score::before {
+    content:"\201C";
+    top: 5px;
+    left:40px;
+}
+
+.score::after {
+    content:"\201D";
+    bottom: -30px;
+    right: 20px;
 }
 
 /**********
@@ -442,13 +568,104 @@ Clients
 **********/
 
 .clients{
-    background: #031e31;
+    background: var(--text-color);
 }
 
 .client-block{
     width: 100%;
     height: 50px;
     background: gray;
+}
+
+/**********
+News
+**********/
+
+
+.item{
+    width: 100%;
+    display: flex;
+}
+
+.item img{
+    width: 194px;
+    border-radius: 8px;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 194px);
+}
+
+.monthDay{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.number{
+    font-size: 30px;
+    line-height: 1;
+}
+
+.dateBox .date{
+    color: var(--secondary-color2);
+    margin-left: 30px;
+}
+
+.text{
+    margin-left: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.text h3{
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.text p{
+    line-height: 1.8;
+}
+
+
+.more a{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin-top:8px;
+    color: var(--secondary-color2);
+    font-weight: 500;
+    transition: 0.5s ease-in;
+}
+
+.more a:hover{
+    color: #FA9B6B;
+}
+
+.more i{
+    padding: 3px 5px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item img{
+        width: 294px;
+    }
+    .info{
+        margin-top: 10px;
+        width: 294px;
+        margin-left: 0px;
+    }
 }
 
 /**********
@@ -483,24 +700,35 @@ Contact Us
     height: 40px;
     border-radius: 5px;
     padding: 6px 12px;
-    border:1px solid #dedede
+    border:1px solid #dedede;
+    -webkit-transition: 0.5s;
+    transition: 0.5s ease-in;
+    outline: none;
 }
 
 textarea.form-input {
     height: 150px;
 }
 
+.form-input[type=text]:focus {
+    border: 1px solid var(--secondary-color2);
+}
+
+textarea:focus{
+    outline: none !important;
+        border-color: var(--secondary-color2);
+}
 /**********
 Footer
 **********/
 
 footer{
-    background: #032e4d;
+    background: var(--secondary-color2);
 }
 
-.footer-list{
+.footer-list a{
     list-style: none;
-    color: #ffffff;
+    color: var(--secondary-color3);
 }
 
 .footer-list li{
@@ -520,8 +748,8 @@ footer{
 }
 
 .copyright{
-    background: #031e31;
-    color:#7bbff0;
+    background: var(--secondary-color2);
+    color: var(--secondary-color3);
     font-weight: 300;
 }
 
@@ -538,9 +766,9 @@ Scroll Top Button
     right: 20px;
     bottom: 30px;
     border-radius: 50px;
-    background: #55efc4;
+    background: var(--text-color);
 }
 
 .scrollTopBtn i{
-    color: #fff;
+    color: var(--secondary-color3);
 }

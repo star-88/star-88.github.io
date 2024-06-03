@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>翦·䬸｜Haircut x Meal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7ad4498b27.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./src/script.js"></script>
     <link rel="stylesheet" href="src/style.css">
-
 </head>
 
 <body>
     <nav id="nav">
         <div class="container">
             <div class="row nav-container">
-                <img src="./img/logo.png" alt="bb-hotel" class="nav-logo">
+                <img src="./img/logo.svg" alt="bb-hotel" class="nav-logo">
                 <ul class="nav-list">
-                    <li><a href="#About">About us</a></li>
-                    <li><a href="#Rooms">Rooms</a></li>
-                    <li><a href="#Testimonials">Testimonials</a></li>
+                    <li><a href="#About">關於翦䬸</a></li>
+                    <li><a href="#Service">服務項目</a></li>
+                    <li><a href="#Testimonials">顧客評價</a></li>
                     <li><a href="#Clients">Clients</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#Contact">聯絡我們</a></li>
                 </ul>
                 <div class="nav-menu-open">
                     <i class="fas fa-bars fa-2x"></i>
                 </div>
-                <div class="row"></div>
             </div>
             <!--.row-->
         </div>
@@ -38,125 +40,163 @@
     </nav>
     <header>
         <div class="header-container">
-            <h1 class="header-h1">Best Hotel in vegas</h1>
-            <div class="subtitle">Voted Bast Hotel 2019 By Travel Advisor</div>
-            <div class="subtitle">5 Star Rated By Hotels.com</div>
+            <h1 class="header-h1">翦·䬸</h1>
+            <div class="subtitle">Haircut x Meal</div>
+            <div class="subtitle">理髮 x 美食雙重享受，帶給您一場懷舊之旅</div>
         </div>
     </header>
     <!--SECTION ABOUT-->
     <section id="About" class='pt-90 pb-90'>
         <div class="container">
-            <div class="h2-container">
-                <h2 class="mb-30">About us</h2>
-            </div>
-            <p class='about-text mb-20'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, nisi sint.
-                Rerum nam velit quo. Accusantium, minus repellat! Explicabo harum omnis animi quas eos perferendis
-                voluptates doloremque mollitia? Tempora cum quisquam nemo aperiam. Temporibus quaerat ducimus minus
-                rerum assumenda consequatur voluptate adipisci suscipit, a, harum fuga inventore in commodi voluptatibus
-                sint! Facilis asperiores odio ratione.!</p>
-
-            <p class='about-text mb-20'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, nisi sint.
-                Rerum nam velit quo. Accusantium, minus repellat! Explicabo harum omnis animi quas eos perferendis
-                voluptates doloremque mollitia? Tempora cum quisquam nemo aperiam. Temporibus quaerat ducimus minus
-                rerum assumenda consequatur voluptate adipisci suscipit, a, harum fuga inventore in commodi voluptatibus
-                sint! Facilis asperiores odio ratione.!
-            </p>
-
-            <div class="mt-20 text-center">
-                <a href="#" class="btn btn-inline">Book Now</a>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./img/aboutus-img.png" alt="about us" class="service-photo">
+                </div>
+                <div class="col-md-6 bg">
+                    <div class="h2-container">
+                        <h2 class="mb-30">關於翦䬸｜Brand Story</h2>
+                    </div>
+                    <p class='about-text mb-20'>歡迎來到我們的理髮廳，我們獨特地結合了理髮服務和夜市小吃輕食，讓您在享受專業理髮的同時，也能飽餐一頓。我們希望通過這樣的設計，為您創造一個既能放鬆身心，又能享受美食的愉悅時光，讓您的每次到訪都成為一段特別的體驗。</p>
+                    <p class='about-text mb-20'>我們的理髮廳以中式旋轉燈、磁磚牆壁和木頭色桌椅精心打造，營造出濃厚的復古氛圍。這樣的設計不僅帶給顧客懷舊的感覺，還讓整個空間更加舒適宜人。精心布置的環境，旨在為您提供輕鬆愜意的氛圍。我們期待每一位顧客在這裡都能放鬆心情，帶著滿意的笑容離開。</p>
+                    <div class="mt-30 text-center">
+                        <a href="#Contact" class="btn btn-inline">立即預約   <i class="fas fa-arrow-down"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="Rooms">
+    <section id="Service" class="pb-60 pt-60 service">
+        <div class="h2-container">
+            <h2 class="mb-30">服務項目｜Service</h2>
+        </div>
         <div class="row">
-            <ul class="hotel-showcase">
-                <li>
-                    <img src="./img/rooms-1.jpg" alt="rooms-1" class="hotel-photo">
-                </li>
-                <li>
-                    <img src="./img/rooms-2.jpg" alt="rooms-2" class="hotel-photo">
-                </li>
-                <li>
-                    <img src="./img/rooms-3.jpg" alt="rooms-3" class="hotel-photo">
-                </li>
-                <li>
-                    <img src="./img/rooms-4.jpg" alt="rooms-4" class="hotel-photo">
-                </li>
-                <li>
-                    <img src="./img/rooms-5.jpg" alt="rooms-5" class="hotel-photo">
-                </li>
-                <li>
-                    <img src="./img/rooms-6.jpg" alt="rooms-6" class="hotel-photo">
-                </li>
-                <li>
-                    <img src="./img/rooms-7.jpg" alt="rooms-7" class="hotel-photo">
-                </li>
-                <li>
-                    <img src="./img/rooms-8.jpg" alt="rooms-8" class="hotel-photo">
-                </li>
-            </ul>
+                <h3 class="mb-20 ml-30">翦·滿足你各式理髮需求｜HAIRCUT</h3>
+                <ul class="service-showcase mb-20">
+                    <li class="img-container">
+                        <img src="./img/haircut1.png" alt="Hair cut" class="service-photo">
+                        <div class="mask">
+                            <h3>剪髮<br>Hair Cut</h3>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <img src="./img/haircut2.jpg" alt="Perm hair" class="service-photo">
+                        <div class="mask">
+                            <h3>燙髮<br>Perm Hair</h3>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <img src="./img/haircut3.jpg" alt="Dye hair" class="service-photo">
+                        <div class="mask">
+                            <h3>染髮<br>Dye Hair</h3>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <img src="./img/haircut4.jpg" alt="Hair care" class="service-photo">
+                        <div class="mask">
+                            <h3>護髮<br>Hair Care</h3>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+        <div class="row">
+            <div class="mb-30 mt-30">
+                <h3 class="mb-20 ml-30">䬸·夜市小吃伴你度過理髮時光｜MEAL</h3>
+                <ul class="service-showcase">
+                    <li class="img-container">
+                        <img src="./img/meal1.jpg" alt="Sandwich" class="service-photo">
+                        <div class="mask">
+                            <h3>蔥油餅<br>Scallion Pancake</h3>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <img src="./img/meal2.jpg" alt="Sweet Potato Balls" class="service-photo">
+                        <div class="mask">
+                            <h3>地瓜球<br>Sweet Potato Balls</h3>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <img src="./img/meal3.png" alt="Red Tea" class="service-photo">
+                        <div class="mask">
+                            <h3>古早味紅茶<br>Red Tea</h3>
+                        </div>
+                    </li>
+                    <li class="img-container">
+                        <img src="./img/meal4.jpg" alt="Soy Milk" class="service-photo">
+                        <div class="mask">
+                            <h3>豆漿<br>Soy Milk</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
     <!--SECTION TESTMONIALS-->
     <section id="Testimonials" class='pt-90 pb-90'>
         <div class="container">
             <div class="h2-container">
-                <h2 class="mb-30">Testimonials</h2>
+                <h2 class="mb-30">顧客評價｜Testimonials</h2>
             </div>
-
             <div class="row">
-                <div class="col-md-4">
                     <div class="testimonial-card">
-                        <p class="testimonial-card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, nisi sint. Rerum nam
-                            velit
-                            quo. Accusantium, minus repellat! Explicabo harum omnis animi quas eos perferendis
-                            voluptates
-                            doloremque mollitia?ererer
-                        </p>
                         <div class="testimonial-card-info text-center">
-                            <img src="./img/delivery-boy.png" alt="testimonial-1" class="testimonial-card-img">
+                            <img src="./img/woman1.png" alt="testimonial-1" class="testimonial-card-img">
+                                <h4 class="testimonial-card-name">Jenny</h4>
+                        </div>
+                        <div class="score">
+                            <div class="star-score">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-card-text">
+                                這裡真是太棒了！理髮師技術一流，環境復古又舒適。我還享用了美味的夜市小吃，真是一次特別的體驗。每次來都讓我感到無比放鬆，強烈推薦！
+                            </p>
+                            <p class="comeDate">2024.05.24</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-info text-center">
+                            <img src="./img/man1.png" alt="testimonial-2" class="testimonial-card-img">
                             <h4 class="testimonial-card-name">John</h4>
-                            <div class="testimonial-card-position">VP of ABC</div>
+                        </div>
+                        <div class="score">
+                            <div class="star-score">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-card-text">
+                                在這裡理髮是一種享受。店內設計復古，燈光柔和，讓人感覺很放鬆。理髮的同時還能品嘗到美味的小吃，實在是物超所值。五星好評，會再來！
+                            </p>
+                            <p class="comeDate">2024.03.01</p>
                         </div>
                     </div>
-                </div>
-                <!--col-md-4-->
-                <div class="col-md-4">
+
                     <div class="testimonial-card">
-                        <p class="testimonial-card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, nisi sint. Rerum nam
-                            velit
-                            quo. Accusantium, minus repellat! Explicabo harum omnis animi quas eos perferendis
-                            voluptates
-                            doloremque mollitia?
-                        </p>
                         <div class="testimonial-card-info text-center">
-                            <img src="./img/woman.png" alt="testimonial-2" class="testimonial-card-img">
-                            <h4 class="testimonial-card-name">Emma</h4>
-                            <div class="testimonial-card-position">VP of ABC</div>
-                        </div>
-                    </div>
-                </div>
-                <!--col-md-4-->
-                <div class="col-md-4">
-                    <div class="testimonial-card" style="margin-bottom: 0;">
-                        <p class="testimonial-card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, nisi sint. Rerum nam
-                            velit
-                            quo. Accusantium, minus repellat! Explicabo harum omnis animi quas eos perferendis
-                            voluptates
-                            doloremque mollitia?
-                        </p>
-                        <div class="testimonial-card-info text-center">
-                            <img src="./img/girl.png" alt="testimonial-3" class="testimonial-card-img">
+                            <img src="./img/woman2.png" alt="testimonial-3" class="testimonial-card-img">
                             <h4 class="testimonial-card-name">Amy</h4>
-                            <div class="testimonial-card-position">VP of ABC</div>
                         </div>
+                        <div class="score">
+                            <div class="star-score">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        <p class="testimonial-card-text">
+                            這家理髮廳讓我愛上了理髮的過程。夜市小吃超好吃，環境也非常舒服。理髮師非常專業，每次都能剪出我喜歡的髮型。每次來都感覺像是度過了一段美好的時光。
+                        </p>
+                        <p class="comeDate">2024.02.18</p>
                     </div>
-                </div>
-                <!--col-md-4-->
+                    </div>
 
             </div>
         </div>
@@ -182,13 +222,113 @@
             </div>
         </div>
     </section>
+    <!--SECTION News-->
+    <section id="News" class="pb-60 pt-60 News">
+        <div class="Container">
+            <div class="h2-container">
+                <h2 class="mb-30">最新消息｜News</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="item mt-30 mb-30">
+                        <img src="./img/haircut1.png" alt="Hair cut" class="service-photo">
+                        <div class="info">
+                            <div class="dateBox">
+                                <div class="date">
+                                    <div class="year">2024</div>
+                                    <div class="monthDay">
+                                        <span class="number">06/05</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3>夏日狂歡理髮大優惠</h3>
+                                <p>即日起至月底，夏日狂歡理髮大優惠來襲！全場理髮服務8折，無論是修剪、染髮還是造型設計，均可享受此驚喜折扣，讓您以超值價格焕然一新！</p>
+                            </div>
+                            <div class="more">
+                                <a href="">LEARN MORE<i class="fas fa-chevron-right"></i></a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="item mt-30 mb-30">
+                        <img src="./img/haircut1.png" alt="Hair cut" class="service-photo">
+                        <div class="info">
+                            <div class="dateBox">
+                                <div class="date">
+                                    <div class="year">2024</div>
+                                    <div class="monthDay">
+                                        <span class="number">05/26</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3>夏季冰涼理髮套餐</h3>
+                                <p>夏季冰涼理髮套餐限時推出！享受清爽剪髮服務的同時，還可免費獲贈一杯特製冰涼飲料。這個夏天，讓我們帶給您清涼與美麗的雙重享受！</p>
+                            </div>
+                            <div class="more">
+                                <a href="">LEARN MORE<i class="fas fa-chevron-right"></i></a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="item mt-30 mb-30">
+                        <img src="./img/haircut1.png" alt="Hair cut" class="service-photo">
+                        <div class="info">
+                            <div class="dateBox">
+                                <div class="date">
+                                    <div class="year">2024</div>
+                                    <div class="monthDay">
+                                        <span class="number">05/15</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3>壽星專屬禮遇</h3>
+                                <p>壽星專屬禮遇來啦！生日當月來我們的理髮廳，即可享受一次免費理髮服務，並獲贈一份精美小吃禮包。在特別的日子裡，讓我們為您增添更多驚喜和快樂！</p>
+                            </div>
+                            <div class="more">
+                                <a href="">LEARN MORE<i class="fas fa-chevron-right"></i></a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="item mt-30 mb-30">
+                        <img src="./img/haircut1.png" alt="Hair cut" class="service-photo">
+                        <div class="info">
+                            <div class="dateBox">
+                                <div class="date">
+                                    <div class="year">2024</div>
+                                    <div class="monthDay">
+                                        <span class="number">04/09</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3>台灣小吃大升級</h3>
+                                <p>美食大升級！我們全新推出鹽酥雞、蚵仔煎和珍珠奶茶等多款人氣小吃。來理髮的同時，享受更多地道的夜市美味，讓您的體驗更豐富、更美味！</p>
+                            </div>
+                            <div class="more">
+                                <a href="">LEARN MORE<i class="fas fa-chevron-right"></i></a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!--SECTION Contact-->
     <section id="Contact"class='pt-90 pb-90'>
         <div class="container">
             <div class="h2-container">
-                <h2 class="mb-60">Contact</h2>
+                <h2 class="mb-60">聯絡我們｜Contact Us</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-30">
@@ -201,19 +341,19 @@
                 <div class="col-md-6">
                     <form action="">
                         <div class="form-group">
-                            <label for="">Name</label>
+                            <label for="">姓名｜Name</label>
                             <input type="text" class="form-input" placeholder="Enter your name">
                         </div>
                         <div class="form-group">
-                            <label for="">Email</label>
+                            <label for="">電子信箱｜Email</label>
                             <input type="text" class="form-input" placeholder="Enter your email">
                         </div>
                         <div class="form-group">
-                            <label for="">Message</label>
+                            <label for="">備註｜Message</label>
                             <textarea class="form-input" placeholder="Enter your Message"></textarea>
                         </div>
                         <div class="form-group text-center">
-                            <button class="btn btn-full">Submmit</button>
+                            <button class="btn btn-full">確認送出</button>
                         </div>
                     </form>
                 </div>
@@ -221,29 +361,27 @@
         </div>
     </section>
 
-    <footer class="pt-60 pb-90">
+    <footer class="pt-60 pb-60">
         <div class="container">
             <div class="row text-center">
                 <ui class="footer-list">
-                    <li>About us</li>
-                    <li>Rooms select</li>
-                    <li>Testimonials</li>
-                    <li>Contact</li>
+                    <li><a href="#About">關於翦䬸</a></li>
+                    <li><a href="#Service">服務項目</a></li>
+                    <li><a href="#Testimonials">顧客評價</a></li>
+                    <li><a href="#Clients">Clients</a></li>
+                    <li><a href="#Contact">聯絡我們</a></li>
                 </ui>
             </div>
             <div class="text-center">
-                <img src="./img/footer-logo.png" alt="Footer-logo" class="footer-logo">
+                <img src="./img/logo.svg" alt="Footer-logo" class="footer-logo">
             </div>
         </div>
     </footer>
     <div class="copyright pb-20 pt-20 text-center">
-        Copyright ◎ BB Hotel Designed by Big Girl Can Code
+        Copyright ◎ Haircut X Meal Designed by Emma Lin
     </div>
-    <a href="#nav" class="scrollTopBtn">
+    <a href="#top" class="scrollTopBtn">
         <i class="fas fa-angle-up fa-2x"></i>
     </a>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="./src/script.js"></script>
 </body>
-
 </html>
