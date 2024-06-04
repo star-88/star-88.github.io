@@ -577,6 +577,7 @@ testimonial
     justify-content: center;
     margin-bottom: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--secondary-color3);
 }
 
 .testimonial-card-info {
@@ -614,7 +615,6 @@ testimonial
     justify-content: center;
     position: relative;
     padding: 30px 50px;
-    background-color: var(--secondary-color3);
 
 }
 
