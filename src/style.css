@@ -191,9 +191,10 @@ h3{
 
 .btn{
     border-radius: 3px;
-    padding: 15px 32px;
+    padding: 16px 32px;
     display: inline-block;
     text-transform: uppercase;
+    font-size: 16px;
 }
 
 .btn-inline{
@@ -230,6 +231,10 @@ h3{
 /**********
 Nav
 **********/
+
+.logo{
+    overflow-clip-margin: content-box;
+}
 
 nav{
     padding: 8px;
@@ -341,13 +346,13 @@ header{
 }
 
 .header-container{
-    background: rgba(0,0,0,0.5);
+    background: rgba(13, 9, 6, 0.3);
     color:#ffffff;
     padding: 20px;
     display: inline-block;
     position: absolute;
     top:50%;
-    left:25%;
+    left:30%;
     transform: translate(-50%,-50%);
 }
 
@@ -436,8 +441,9 @@ Service
 
 .mask h3 {
     text-align: center;
-    padding-top: 120px;
-    font-weight: 200;
+    position: relative;
+    top: 40%;
+    font-weight: 300;
 }
 
 
@@ -454,6 +460,10 @@ Service
         margin-top: 20px;
     }
 
+    .service-showcase li {
+        height: 200px;
+    }
+
 }
 
 /**********
@@ -464,12 +474,18 @@ News
 .item{
     width: 100%;
     display: flex;
+    overflow: hidden;
 }
 
 .item img{
     width: 194px;
     height: 194px;
     border-radius: 8px;
+    transition: all 0.5s ease-in;
+}
+
+.item img:hover{
+    transform: scale(1.1);
 }
 
 .info {
@@ -563,23 +579,10 @@ testimonial
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-@media only screen and (max-width:768px) {
-    .testimonial-card {
-        margin: 0px 20px 20px;
-        flex-direction: column;
-    }
-    .testimonial-card-info .testimonial-card-name{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-}
-
 .testimonial-card-info {
     background: var(--secondary-color1);
     color: var(--secondary-color3);;
-    margin: 0px -30px 0px;
+    margin: 0px 30px 0px -30px;
     padding: 60px 30px;
     position: relative;
 }
@@ -592,7 +595,7 @@ testimonial
     width: 60px;
     background: var(--secondary-color3);
     border-radius: 50%;
-    border: 2px solid var(--secondary-color2);
+    border: 2px var(--secondary-color2) solid;
 }
 
 .testimonial-card-name{
@@ -611,6 +614,7 @@ testimonial
     justify-content: center;
     position: relative;
     padding: 30px 50px;
+    background-color: var(--secondary-color3);
 
 }
 
@@ -651,6 +655,40 @@ testimonial
     content:"\201D";
     bottom: -30px;
     right: 20px;
+}
+
+@media only screen and (max-width:768px) {
+    .testimonial-card {
+        margin: 0px 20px 20px;
+        padding: 0px 10px 0px;
+        flex-direction: column;
+    }
+    .testimonial-card-info .testimonial-card-name{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .testimonial-card-info{
+        margin: 0px -10px;
+    }
+    .score{
+        margin: 30px 0px;
+        padding: 0px;
+    }
+
+    .score::before {
+        content:"\201C";
+        top: -30px;
+        left: 0px;
+    }
+
+    .score::after {
+        content:"\201D";
+        bottom: -50px;
+        right: 20px;
+    }
+
 }
 
 

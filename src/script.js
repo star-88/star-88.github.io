@@ -3,22 +3,8 @@ $(document).ready(function() {
   var navMenu = $('.nav-menu-open')
   var navContainer = $('.nav-container')
   var navItem = $('.nav-list li a')
-
-    navMenu.click(function() {
-        console.log('navMemu Click')
-      navContainer.toggleClass("nav-show-menu")
-    })
-
-  window.addEventListener('scroll', () => {
-    let header = document.querySelector('nav');
-    header.classList.toggle('sticky', window.scrollY>750)
-  })
-
-  navItem.click(function() {
-    navContainer.removeClass('nav-show-menu');
-  });
-
-
+  var nav = document.getElementById('nav');
+  var navList = document.querySelector('.nav-list');
 
   // Smooth scrolling for all links with hashes
   $('a[href="#top"]').on('click', function(event) {
@@ -40,4 +26,33 @@ $(document).ready(function() {
     }
   });
 
-});
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 750) {
+        $('.scrollTopBtn').fadeIn();
+    } else {
+        $('.scrollTopBtn').fadeOut();
+    }
+  });
+
+
+    navMenu.click(function() {
+      console.log('navMemu Click');
+      navContainer.toggleClass('nav-show-menu');
+    })
+
+    $(".btn-inline").click(function () {
+
+        $('.navList').hide();
+        console.log("test")
+    })
+
+
+    window.addEventListener('scroll', () => {
+      let header = document.querySelector('nav');
+      header.classList.toggle('sticky', window.scrollY>750)
+    })
+
+    navItem.click(function() {
+      navContainer.removeClass('nav-show-menu');
+    })
+  });
