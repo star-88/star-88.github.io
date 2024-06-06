@@ -819,6 +819,10 @@ textarea:focus{
     outline: none !important;
         border-color: var(--secondary-color2);
 }
+
+::placeholder{
+    font-family: "Noto Serif TC";
+}
 /**********
 Footer
 **********/
