@@ -411,6 +411,11 @@ About Us
     .row{
         flex-direction: column;
     }
+
+    .about-photo{
+        width: 50%;
+        height: 50%;
+    }
 }
 
 /**********
