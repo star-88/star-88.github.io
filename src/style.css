@@ -391,6 +391,12 @@ header{
 About Us
 **********/
 
+#About h2::before{
+        left: 18px;
+        top: 50px;
+
+}
+
 .about-text{
     line-height: 1.8;
     width: 100%;
@@ -412,7 +418,7 @@ About Us
         flex-direction: column;
     }
 
-    
+
 }
 
 /**********
@@ -494,7 +500,7 @@ Service
     font-weight: 600;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
     .service-showcase{
         flex-flow: row wrap;
         justify-content: center;
@@ -506,16 +512,9 @@ Service
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 414px){
     .service-showcase{
         flex-direction: column;
-    }
-}
-
-@media only screen and (max-width: 767px){
-    .service-showcase li {
-        height: 300px;
-        width: 300px;
     }
 }
 
@@ -764,6 +763,14 @@ testimonial
     }
 
 }
+
+@media only screen and (max-width:384px){
+    #Testimonials h2::before{
+        left: 100px;
+        top: 50px;
+    }
+}
+
 
 
 /**********
