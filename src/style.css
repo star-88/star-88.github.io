@@ -93,11 +93,17 @@ Layout / Grid Design
 **********/
 
 .container{
-    width: 960px;
+    width: 1200px;
     margin: 0 auto;
 }
 
-@media only screen and (min-width:769px) and (max-width:992px){
+@media only screen and (max-width:1336px){
+    .container {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width:992px){
     .container {
         width: 750px;
     }
@@ -106,6 +112,12 @@ Layout / Grid Design
 @media only screen and (max-width:768px) {
     .container {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width:441px) {
+    .container {
+        width: 90%;
     }
 }
 
@@ -123,8 +135,8 @@ Layout / Grid Design
 
 
 [class^="col-"] {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 16px;
+    padding-left: 16px;
     float:left;
 }
 
@@ -192,53 +204,54 @@ h2::before{
 }
 
 h3{
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 24px;
 }
 
+h4{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+
 .btn{
-    border-radius: 3px;
     padding: 16px 32px;
     display: inline-block;
-    text-transform: uppercase;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .btn-inline{
     color: var(--secondary-color2);
-    border: var(--secondary-color2) 1px solid ;
+    border: var(--secondary-color2) 2px solid ;
     border-radius: 8px;
-    font-weight: 600;
 }
 
 .btn-inline:hover{
-    color: var(--secondary-color2);
-    border: var(--secondary-color2) 2px solid ;
-    box-shadow: 0px 0px 3px 0px var(--secondary-color2);
+    box-shadow: 0px 0px 4px 0px var(--secondary-color2);
     transition:all 0.5s;
 }
 
 .btn-full{
-    color: var(--secondary-color2);
-    background-color: var(--secondary-color3);
+    color: var(--secondary-color3);
+    background-color: var(--secondary-color2);
+    border: none;
     border-radius: 8px;
     cursor: pointer;
     font-family: "noto serif tc";
-    font-weight: 600;
-    border: 1px solid;
 }
 
 .btn-full:hover{
-    color: var(--secondary-color3);
-    background-color: var(--secondary-color2);
+    background-color: #0F1F1A;
     transition:all 0.5s;
-    border-radius: 8px;
 }
 
 .img-full{
     width: 100%;
     height: 50pt;
 }
+
 /**********
 Nav
 **********/
@@ -253,12 +266,12 @@ nav{
     width: 100%;
     position: fixed;
     background-color: hwb(0 100% 0% / 0.8);
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.15);
 }
 
 nav.sticky{
     background-color: #EBEBE9;
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.15);
 }
 
 .nav-logo{
@@ -425,9 +438,13 @@ About Us
 Service
 **********/
 
+#Service h3{
+    font-weight: 500;
+}
+
 
 .service-showcase{
-    width: 100%;
+    padding: 0 20px 0;
     list-style: none;
     display: flex;
 }
@@ -436,8 +453,8 @@ Service
     border-radius: 8px;
     margin: 8px;
     overflow:hidden;
-    height: 220px;
-    width: 220px;
+    height: 300px;
+    width: 300px;
 }
 
 .service-photo {
@@ -470,7 +487,7 @@ Service
     transition: all 400ms ease-in 50ms;
 }
 
-.mask h3 {
+.mask h4 {
     text-align: center;
     position: relative;
     top: 40%;
@@ -484,6 +501,7 @@ Service
 
 .service1, .service2{
     text-align: center;
+    padding: 0 12px;
 }
 
 .service1::before {
@@ -500,21 +518,51 @@ Service
     font-weight: 600;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1336px) {
     .service-showcase{
-        flex-flow: row wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .service-showcase{
+        padding: 0;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .service-showcase li {
-        height: 280px;
-        width: 280px;
+        height: 240px;
+        width: 240px;
     }
 }
 
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 562px){
     .service-showcase{
-        flex-direction: column;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-showcase li {
+        height: 210px;
+        width: 210px;
+    }
+}
+
+@media only screen and (max-width: 466px){
+    .service-showcase{
+        padding: 0;
+    }
+
+    .service-showcase li {
+        height: 150px;
+        width: 150px;
+    }
+
+    .mask h4{
+        font-size: 16px;
     }
 }
 
@@ -523,14 +571,15 @@ News
 **********/
 
 
-.item{
+.news-card{
     display: flex;
+    flex-direction: column;
     border-radius: 8px;
 }
 
 .photo-box{
-    width: 194px;
-    height: 194px;
+    width: 100%;
+    height: 280px;
     border-radius: 8px;
     overflow:hidden;
 }
@@ -538,6 +587,7 @@ News
 .poster-photo{
     width: 100%;
     height: 100%;
+    object-fit:cover;
     border-radius: 8px;
     transition: all 0.5s ease-in;
 }
@@ -548,13 +598,10 @@ News
 
 .info {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 194px);
+    margin-top: 20px;
 }
 
 .monthDay{
-    display: flex;
     margin-bottom: 20px;
 }
 
@@ -565,11 +612,9 @@ News
 
 .dateBox .date{
     color: var(--secondary-color2);
-    margin-left: 30px;
 }
 
 .text{
-    margin-left: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -593,7 +638,7 @@ News
     display: flex;
     justify-content: flex-end;
     text-align: right;
-    margin-top:8px;
+    margin-top:20px;
     color: var(--secondary-color2);
     font-weight: 500;
     transition: 0.5s ease-in;
@@ -607,45 +652,12 @@ News
     padding: 3px 5px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    .item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .photo-box{
-        width: 294px;
-    }
-    .info{
-        margin-top: 10px;
-        width: 294px;
-    }
-
-    .dateBox .date{
-        margin-left: 0;
+@media only screen and (max-width: 768px){
+    [class^="col-"]:not(:last-child) {
+        margin-right: 0;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .photo-box{
-        width: 294px;
-        height: 294px;
-    }
-
-    .info{
-        margin-top: 10px;
-        width: 294px;
-    }
-
-    .dateBox .date{
-        margin-left: 0;
-    }
-}
 
 
 /**********
@@ -739,23 +751,40 @@ testimonial
     right: 20px;
 }
 
+@media only screen and (min-width:769px) and (max-width:992px){
+    .score{
+        padding: 50px 0;
+    }
+    .score::before {
+        content:"\201C";
+        top: 0px;
+        left: -20px;
+    }
+
+    .score::after {
+        bottom: -10px;
+        right: -20px;
+    }
+}
+
+
 @media only screen and (max-width:768px) {
     .testimonial-card {
         margin: 0px 20px 20px;
         padding: 0px 10px 0px;
         flex-direction: column;
     }
-    .testimonial-card-info .testimonial-card-name{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
 
     .testimonial-card-info{
         margin: 0px -10px;
+        padding: 30px;
+    }
+
+    .testimonial-card-name{
+        margin: 70px auto 0;
     }
     .score{
-        margin: 30px 30px;
+        margin: 30px;
         padding: 0px;
     }
 
@@ -767,23 +796,21 @@ testimonial
 
     .score::after {
         bottom: -50px;
-        right: 20px;
-    }
-
-    .score::after {
-        bottom: -50px;
-        right: -10px;
+        right: -30px;
     }
 
 }
 
-@media only screen and (max-width:384px){
+@media only screen and (max-width:441px){
     #Testimonials h2::before{
-        left: 100px;
+        left: 0px;
         top: 50px;
     }
-}
 
+    #Testimonials h2{
+        margin-left: 20px;
+    }
+}
 
 
 /**********
@@ -805,7 +832,7 @@ Contact Us
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .form-group label{
@@ -816,7 +843,7 @@ Contact Us
 .form-input{
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 4px;
     padding: 6px 12px;
     border:1px solid #dedede;
     -webkit-transition: 0.5s;
@@ -839,6 +866,21 @@ textarea:focus{
 
 ::placeholder{
     font-family: "Noto Serif TC";
+}
+
+.submit-bottom{
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:441px){
+    #Contact h2::before{
+        left: 0px;
+        top: 50px;
+    }
+
+    #Contact h2{
+        margin-left: 20px;
+    }
 }
 /**********
 Footer
