@@ -288,6 +288,7 @@ nav.sticky{
 .nav-list li{
     display: inline-block;
     margin: 8px 0;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -606,7 +607,7 @@ News
 }
 
 .number{
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1;
 }
 
